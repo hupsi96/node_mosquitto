@@ -4,7 +4,7 @@ var mqtt = require('mqtt')
 var client = mqtt.connect('mqtt://192.168.2.114')
 
 client.on('connect', function () {
-  console.log("Client is connected to 192.168.2.114:1883")
+  console.log("Client is connected to mqtt://192.168.2.114:1883")
     client.subscribe('zimmer/#')
   })
 
