@@ -1,5 +1,5 @@
 var mqtt = require('mqtt')
-var client = mqtt.connect('127.0.0.1')
+var client = mqtt.connect([{ host: '192.168.2.114', port: 1883 }])
 
 client.on('connect', function () {
     client.subscribe('zimmer/#')
