@@ -2,7 +2,7 @@ var mqtt = require('mqtt')
 var client = mqtt.connect('127.0.0.1')
 
 client.on('connect', function () {
-    client.subscribe('presence')
+    client.subscribe('zimmer/#')
   })
 
   client.on('message', function (topic, message) {
@@ -10,4 +10,3 @@ client.on('connect', function () {
     console.log(message.toString())
     client.end()
   })
-  
